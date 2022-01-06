@@ -10,8 +10,8 @@ export default function LoadingScreen({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <Text>
-                Loading...
+            <Text style={styles.socialText}>
+                Be Social
             </Text>
             <ActivityIndicator size={'large'}></ActivityIndicator>
         </View>
@@ -22,6 +22,12 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+    },
+    socialText: {
+        fontWeight: "bold",
+        fontSize: 30,
+        marginBottom: 20,
+        color: 'crimson'
     }
 })
