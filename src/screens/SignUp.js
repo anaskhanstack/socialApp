@@ -5,25 +5,26 @@ import { useForm } from 'react-hook-form';
 import FormInput from '../components/input/Input'
 import Button from '../components/button/Button';
 
-export default function LoginScreen({ navigation }) {
+export default function SignUpScreen({ navigation }) {
     const { register, handleSubmit } = useForm()
     return (
         <View style={styles.container}>
             <Text style={styles.greeting}>
-                {`Hello again.\nWelcome back.`}
+                {`Hello.\nSign up tp get started.`}
             </Text>
             <View style={styles.form}>
+                <FormInput label={"Full Name"} />
                 <FormInput label={"Email Address"} />
-                <FormInput label={"Password"} secure />
+                <FormInput label={"Password"} secure={true} />
             </View>
 
-            <Button title="Sign in" />
+            <Button title="Sign Up" />
 
-            <TouchableOpacity style={styles.helper} onPress={() => navigation.push("SignUp")}>
-                <Text>New to SocialApp?{" "}<Text style={styles.helperText}>Sign Up</Text></Text>
+            <TouchableOpacity style={styles.helper} onPress={() => navigation.push("Login")}>
+                <Text>Already have account?{" "}<Text style={styles.helperText}>Sign In</Text></Text>
             </TouchableOpacity>
 
-        </View >
+        </View>
     )
 }
 
